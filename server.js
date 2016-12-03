@@ -26,7 +26,7 @@ wss.on('connection', (ws) => {
     client.send(JSON.stringify({
       type: "clientCounter",
       content: wss.clients.length
-    }))
+    }));
   })
   ws.on('message', function(event) {
   let parsedMessage = JSON.parse(event);
@@ -59,9 +59,9 @@ wss.on('connection', (ws) => {
     client.send(JSON.stringify({
       type: "clientCounter",
       content: wss.clients.length
-    }))
+    }));
   })
-    console.log('Client disconnected')
+    console.log('Client disconnected');
   });
 
 });
